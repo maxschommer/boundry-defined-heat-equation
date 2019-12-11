@@ -26,7 +26,7 @@ def runGradDescent(f_type):
     v = np.load(outfile)
     # errFunct(goalFunc(x), T)
     # grad(v, .001, goalFunc(x), T)
-    optimizedV = gradDescent(v, .001, 100, .05, dt, dx, t_f, L, k, f_type=f_type)
+    optimizedV = gradDescent(v, .001, 100, .1, dt, dx, t_f, L, k, f_type=f_type)
     np.save(outfile, optimizedV)
     # print("V: ", optimizedV)
     print("Saved output")
