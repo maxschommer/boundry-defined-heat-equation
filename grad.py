@@ -24,6 +24,9 @@ def f(t, v, t_f, f_type="sin"):
         for i in range(t.shape[0]):
             res[i] = v[int(len(v)*i/t.shape[0])]
         return res
+    if f_type == "expsin":
+        from fit_data import func
+        return func(t, *v)
 
 def goalFunc(x, L):
     return np.sin(2*np.pi/L*x)
